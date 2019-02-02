@@ -15,7 +15,6 @@ switch ($method) {
         {
             $filename = "log.csv";
         
-            // create the file if it doesn't exist
             $column_headings = "Author, Temmprature, Humudity, Date\n";
         
             if (!file_exists($filename)) {
@@ -24,7 +23,6 @@ switch ($method) {
         
             $Content = "$Author, $Temprature, $Humidity, $Created_at\n";
         
-            // append the content to the file
             file_put_contents($filename, $Content, FILE_APPEND);
         
         }
